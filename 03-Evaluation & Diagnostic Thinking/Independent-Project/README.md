@@ -209,9 +209,9 @@ The original date was filled with the **report's date (16/10/2026)** instead of 
 **Status:** ❌ (bug found, see Challenges)
 
 **Re-test after fix:**
-[Fill in after applying the fix. Expected: original date = 18/10/2026 and the time is filled.]
+ original date = 18/10/2026 and the time is filled.
 
-**Status:** ✅ / ❌
+**Status:** ✅ 
 
 ---
 
@@ -276,11 +276,11 @@ If I continued developing this project, I would:
 
 ## 🔗 Project Links
 
-**Live Demo:** [Link]
+**Live Demo:** [[Link]](https://session-starboard.lovable.app)
 
 **Workflow:** Not applicable (web app, no Zapier workflow)
 
-**Repository:** [Link]
+**Repository:** [[Link]](https://github.com/danaabuhassira/AI-Automation-Portfolio/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project)
 
 ---
 
@@ -288,4 +288,4 @@ If I continued developing this project, I would:
 
 **Dana Abu Hassira**
 
-[LinkedIn](https://www.linkedin.com/in/dana-abu-hassira-3a23a6294/) · [GitHub]([Link])
+[LinkedIn](https://www.linkedin.com/in/dana-abu-hassira-3a23a6294/) · [GitHub]([[Link](https://github.com/danaabuhassira)])
