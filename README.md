@@ -8,9 +8,9 @@
 
 ## 👩‍💻 About Me
 
-Hi, I'm **[Your Name]**.
+Hi, I'm **Dana Abu Hasira**.
 
-I am a **[Your Professional Title]** interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
+I am a UX/UI designer and a computer systems engineering graduate, interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
 
 Through this portfolio, I document the systems and solutions I design and build throughout my AI Automation journey.
 
@@ -25,10 +25,10 @@ Through this portfolio, I document the systems and solutions I design and build 
 
 ### Connect With Me
 
-- 💼 LinkedIn: [Your LinkedIn]
+- 💼 LinkedIn: www.linkedin.com/in/dana-abu-hassira-3a23a6294
 - 🌐 Portfolio: [Your Portfolio]
-- 📧 Email: [Your Email]
-- 🐙 GitHub: [Your GitHub]
+- 📧 Email: danaabuhassira@gmail.com
+- 🐙 GitHub: https://github.com/danaabuhassira
 
 ---
 
@@ -52,10 +52,10 @@ The projects demonstrate my progression from understanding real-world work to de
 
 | Unit | Capability | Projects | Status |
 |---|---|---|---|
-| U1 | Process & Data Thinking | 2 Projects | ⬜ |
-| U2 | AI-Powered Solution Building | 2 Projects | ⬜ |
-| U3 | Quality Thinking | 2 Projects | ⬜ |
-| U4 | Knowledge Grounding | 2 Projects | ⬜ |
+| U1 | Process & Data Thinking | 2 Projects | ✅ |
+| U2 | AI-Powered Solution Building | 2 Projects | ✅ |
+| U3 | Quality Thinking | 2 Projects | ✅ |
+| U4 | Knowledge Grounding | 2 Projects | 🔄 |
 | U5 | Agent & Decision Thinking | 2 Projects | ⬜ |
 | U6 | Integration Thinking | 2 Projects | ⬜ |
 | U7 | Reliability Thinking | 2 Projects | ⬜ |
@@ -67,18 +67,19 @@ The projects demonstrate my progression from understanding real-world work to de
 
 > My strongest projects will be highlighted here after completing the course.
 
-### ⭐ Project 01 — [Project Name]
+### ⭐ Project 01 — Meeting Follow-up Automation
 
 **What it solves:**  
-[Short description]
+Turns unstructured meeting notes into a clear follow-up with the action item, the owner, and the deadline, and handles the cases where information is missing.
+
 
 **Tools:**  
-[Tools]
+Google Forms · Zapier · AI by Zapier · Paths by Zapier · Google Sheets · Gmail
 
 **My role:**  
-[What I designed/built]
+I chose the problem and designed the workflow: meeting notes are submitted through a form, AI extracts the key fields (action item, owner, deadline, meeting summary, missing information, request status), and the flow then splits into a valid path, which logs a row and sends a follow-up email, and a fallback path, which alerts the organizer to complete the missing details.
 
-🔗 [View Project](./path-to-project)
+🔗 [View Project](https://github.com/danaabuhassira/Meeting-Follow-up-Automation/tree/main/1-As1)
 
 ---
 
