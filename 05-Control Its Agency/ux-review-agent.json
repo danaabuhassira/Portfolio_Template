@@ -1,0 +1,251 @@
+{
+  "name": "UX Review Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        0,
+        0
+      ],
+      "id": "8f4d2cf8-cfcc-4518-a11b-6a4e230d0aab",
+      "name": "Telegram Trigger",
+      "webhookId": "e551a1f7-0434-401b-8e00-055cd4920576",
+      "credentials": {
+        "telegramApi": {
+          "id": "wyekXpFXHbsE0bVY",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.text }}",
+        "options": {
+          "systemMessage": "You are a UX Review Agent that helps UX/UI designers review their design ideas and briefs.\n\nSCOPE\n- You only help with UX/UI design reviews.\n- If the request is about anything else (coding, homework, general chat), politely refuse and explain what you can help with.\n\nINFORMATION YOU NEED BEFORE REVIEWING\n- Platform (web or mobile), target users, and design goal.\n- If any of these is missing, ask for ONLY the missing items. Do not guess and do not review yet.\n- If the request is vague, ask a clarifying question first.\n\nTHE REVIEW\n- When you have all three, give a short review covering: clarity, visual hierarchy, accessibility, and usability, with one concrete improvement for each.\n- You can only see text. If the user mentions an image or a design file, say you cannot see it and ask them to describe it.\n\nSAVING (tool: Save Review)\n- After giving a review, ask the user: \"Do you want me to save this review?\"\n- Use the Save Review tool ONLY after the user clearly says yes.\n- Never save automatically.\n\nSTOP AND ESCALATE\n- You do NOT have any tool to delete or edit saved reviews. Your only tool is Save Review.\n- If the user asks to delete, edit, or clear anything, refuse immediately in the first reply. Do NOT ask for confirmation, because you cannot do it anyway.\n- Tell the user that a person must do it manually from the reviews table, then stop.\n- Never say or imply that you deleted or changed anything.\n- If you are unsure about a request, ask the user instead of acting.\n\nReply in the same language the user writes in. Keep replies short and clear."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "21487822-e553-4851-9830-aaa9aa5e1d08",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        208
+      ],
+      "id": "58c5a6b6-9e05-4ad6-82c4-2d77f999c69a",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "AIzMwau8UMt0FPh5",
+          "name": "Google Gemini(PaLM) Api account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.from.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        576,
+        0
+      ],
+      "id": "acf16df7-45e1-469c-a01d-8d84d70be3c5",
+      "name": "Send a text message",
+      "webhookId": "be0b731a-df0b-4a99-83d0-9c687fcc5a56",
+      "credentials": {
+        "telegramApi": {
+          "id": "wyekXpFXHbsE0bVY",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Saves a completed UX review into the reviews table. Use it only after the user confirms they want the review saved.",
+        "dataTableId": {
+          "__rl": true,
+          "value": "fVtPOw47vfQP0FhN",
+          "mode": "list",
+          "cachedResultName": "reviews",
+          "cachedResultUrl": "/projects/srucm9TZIH5bWXZP/datatables/fVtPOw47vfQP0FhN"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "platform": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('platform', ``, 'string') }}",
+            "users": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('users', ``, 'string') }}",
+            "goal": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('goal', ``, 'string') }}",
+            "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('summary', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "platform",
+              "displayName": "platform",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "users",
+              "displayName": "users",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "goal",
+              "displayName": "goal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1.1,
+      "position": [
+        496,
+        256
+      ],
+      "id": "3f1b0336-d374-448a-80c6-ebb3e57fdced",
+      "name": "Save Review"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        224,
+        208
+      ],
+      "id": "3e72cc99-5eb9-44e8-866d-2975d113bb3b",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Review": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "5d294752-1085-4a0a-9912-e1e1d3815ef9",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7354c46a09bb2e6980691eff7e1cb9183b4d8cef141db72b20d5211f175639eb"
+  },
+  "nodeGroups": [],
+  "id": "pw1Hdiz5S0tBM00T",
+  "tags": []
+}
