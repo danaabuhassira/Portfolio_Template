@@ -226,30 +226,6 @@ flowchart LR
 
 ---
 
-## 🗂️ هيكل المستودع
-
-```text
-freelance-compass/
-├── 📄 README.md
-├── 📁 knowledge-base/
-│   ├── upwork.md
-│   ├── freelancer.md
-│   ├── khamsat.md
-│   ├── mostaql.md
-│   └── 00-comparison.md
-├── 📁 screenshots/
-├── 📁 prompts/
-│   ├── system-prompt.md
-│   └── user-prompt.md
-└── 📁 docs/
-    ├── 00-project-log.md                   ← قراراتي وأسبابها
-    ├── 01-knowledge-sources-summary.md     ← ملخص المصادر وجودتها
-    ├── 03-test-cases-and-results.md        ← جدول الاختبار
-    └── 04-evaluation-and-improvement-report.md
-```
-
----
-
 <div align="center">
 
 ### 🧭 «الهدف ليس أن يجيب الذكاء الاصطناعي، بل أن نفهم كيف يجيب ونحسّن ذلك.»
