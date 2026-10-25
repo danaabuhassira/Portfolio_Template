@@ -1,5 +1,4 @@
 # U1 — UNDERSTAND THE WORK
-
 ## Process & Data Thinking
 
 > Before automating the work, understand the work.
@@ -22,12 +21,12 @@
 
 خلال هذه الوحدة، طوّرت قدرتي على:
 
-- **Understand the Work:** فهم المشكلة وسياق العمل والنتيجة المطلوبة.
-- **Decompose the Work:** تفكيك العملية إلى Workflow وTasks وSubtasks.
-- **Understand the Input:** تحديد البيانات المطلوبة وفهم البيانات المنظمة وغير المنظمة.
-- **Design the Decision:** تحديد متى نستخدم AI ومتى تكفي القواعد المحددة.
-- **Handle Exceptions Safely:** التعامل مع الحالات غير المتوقعة وتحديد متى نحتاج إلى Human Review.
-- **Design the Automation:** تحويل تصميم العملية إلى Workflow قابل للتنفيذ.
+* **Understand the Work:** فهم المشكلة وسياق العمل والنتيجة المطلوبة.
+* **Decompose the Work:** تفكيك العملية إلى Workflow وTasks وSubtasks.
+* **Understand the Input:** تحديد البيانات المطلوبة وفهم البيانات المنظمة وغير المنظمة.
+* **Design the Decision:** تحديد متى نستخدم AI ومتى تكفي القواعد المحددة.
+* **Handle Exceptions Safely:** التعامل مع الحالات غير المتوقعة وتحديد متى نحتاج إلى Human Review.
+* **Design the Automation:** تحويل تصميم العملية إلى Workflow قابل للتنفيذ.
 
 ---
 
@@ -35,27 +34,27 @@
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** AI Client Intake & Request Routing System
 
 مشروع عملي أطبّق فيه مفاهيم تحليل العمل وتصميم عملية أتمتة تعتمد على AI.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+* **Problem:** معالجة طلبات العملاء يدويًا تستهلك وقتًا وقد تؤدي إلى إغفال معلومات مهمة.
+* **Solution:** أتمتة تستقبل الطلب من Google Form، وتستخرج المعلومات بالـAI، وتوجّه الطلب إلى `VALID` أو `NEEDS_REVIEW`، وتسجّل النتيجة وترسل الإشعار المناسب.
+* **Tools:** Google Forms, Zapier, AI by Zapier, Paths, Google Sheets, Gmail
 
-[Explore the Project](./course-project/)
+[Explore the Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/01-Process%20%26%20Data%20Thinking/Course-Project)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** Meeting Follow-up Automation
 
 مشروع مستقل أطبّق فيه ما تعلمته على مشكلة مختلفة، مع تصميم الحل وتنفيذه وتوثيق النتائج.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+* **Problem:** ملاحظات الاجتماعات غالبًا لا تحدد المسؤول أو الموعد النهائي، فتضيع المهام أو تتأخر متابعتها.
+* **Solution:** أتمتة تستخرج المهمة والمسؤول والموعد من ملاحظات الاجتماع، وترسل المتابعة عند اكتمال المعلومات، وتحيل الناقص إلى منظِّمة الاجتماع.
+* **Tools:** Google Forms, Zapier, AI by Zapier, Paths, Google Sheets, Gmail
 
-[Explore the Project](./independent-project/)
+[Explore the Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/01-Process%20%26%20Data%20Thinking/Independent-Project)
 
 ---
 
@@ -74,7 +73,7 @@
 
 ## 📌 Key Takeaway
 
-**A good automation starts with a well-understood process, not with a tool.**
+> **A good automation starts with a well-understood process, not with a tool.**
 
 نجاح الأتمتة يبدأ بفهم العمل وتصميم العملية، وليس بمجرد اختيار الأداة.
 
@@ -82,20 +81,18 @@
 
 ## 📈 Capability Progress
 
-- [ ] فهم المشكلة والنتيجة المطلوبة.
-- [ ] تفكيك العمل إلى خطوات واضحة.
-- [ ] تحديد المدخلات والمخرجات.
-- [ ] تصميم قرارات AI وRule-Based Logic.
-- [ ] تحديد الحالات التي تحتاج إلى Human Review.
-- [ ] تنفيذ الحل وتوثيق نتائجه.
+* فهم المشكلة والنتيجة المطلوبة.
+* تفكيك العمل إلى خطوات واضحة.
+* تحديد المدخلات والمخرجات.
+* تصميم قرارات AI وRule-Based Logic.
+* تحديد الحالات التي تحتاج إلى Human Review.
+* تنفيذ الحل وتوثيق نتائجه.
 
 ---
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project/)
-- [Independent Project](./independent-project/)
+* [Guided Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/01-Process%20%26%20Data%20Thinking/Course-Project)
+* [Independent Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/01-Process%20%26%20Data%20Thinking/Independent-Project)
 
----
-
-**Next:** U2 — BUILD THE SYSTEM
+**Next: U2 — BUILD THE SYSTEM**
