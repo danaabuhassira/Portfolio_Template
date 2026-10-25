@@ -1,34 +1,27 @@
 # U3 — PROVE IT WORKS
+## Evaluation & Diagnostic Thinking
 
-## Quality Thinking
+> A working screen is not proof that the system works.
 
-> Building a solution is not the same as proving it works.
-
-في هذه الوحدة، أنتقل من بناء الحل إلى التحقق من جودته.
-
-أتعلم كيف أصمم اختبارات مناسبة، وأتحقق من النتائج المتوقعة والفعلية، وأكشف الأخطاء والحالات التي قد لا يتعامل معها النظام بالشكل الصحيح.
-
-الهدف هو الانتقال من الانطباع بأن الحل يعمل إلى امتلاك أدلة تدعم هذا الاستنتاج.
+In this unit, I learned how to check that an application really works: that its data is stored, that access is controlled, that features are tested with real cases, that bugs are found and fixed, and that the evidence is documented.
 
 ---
 
 ## 🎯 Capability
 
-**Quality Thinking**
+**Evaluation & Diagnostic Thinking**
 
-القدرة على التحقق من سلوك النظام وجودة مخرجاته باستخدام الاختبارات والأدلة والتحليل المنهجي للأخطاء.
+The ability to test an application, find and fix problems, and show evidence that it works.
 
 ---
 
 ## 🧠 What I Learned
 
-- **Testing Strategy:** تحديد ما الذي يجب اختباره.
-- **Test Cases:** تصميم حالات اختبار تمثل استخدامات مختلفة.
-- **Expected vs. Actual Results:** مقارنة النتائج المتوقعة بالنتائج الفعلية.
-- **Edge Cases:** اختبار الحالات غير المعتادة أو التي تقع عند حدود السلوك المتوقع.
-- **Failure Analysis:** تحليل أسباب الإخفاق.
-- **Iteration:** تحسين الحل بناءً على نتائج الاختبارات.
-- **Evidence-Based Evaluation:** توثيق الأدلة التي تدعم تقييم النظام.
+* **Data:** Checking that data is really saved and retrieved, not only displayed.
+* **Identity & Access:** Making sure users sign in and reach only what they should.
+* **Tests:** Testing positive, negative and edge cases, and comparing expected and actual results.
+* **Debugging:** Reading errors, finding the layer that failed, and fixing the real cause.
+* **Quality Evidence:** Documenting tests, bugs and screenshots so the results can be checked.
 
 ---
 
@@ -36,66 +29,61 @@
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** TaskBridge
 
-أختبر حلًا عمليًا باستخدام حالات اختبار محددة، وأوثق النتائج وأحدد جوانب التحسين.
+A web app built with Lovable and Supabase, where I tested sign-up, access and plan creation and documented the results.
 
-- **System Under Test:** [النظام الذي يجري اختباره]
-- **Testing Focus:** [ما الذي أختبره]
-- **Tools:** [الأدوات المستخدمة]
+* **Problem:** Unclear work requests are hard to turn into organized tasks and trackable progress.
+* **Solution:** An app with accounts, plans, tasks, priorities, statuses and a progress percentage calculated from completed tasks.
+* **Tools:** Lovable, Supabase (Auth and PostgreSQL), GitHub
 
-[Explore the Project](./course-project/)
+[Explore the Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** Student Session Tracker
 
-أطبق منهجية الاختبار على حل مستقل، وأوثق حالات النجاح والفشل والتحسينات التي أجريتها.
+An app I built for my own teaching work, where I enter my students' lesson reports and manage them in one place.
 
-- **System Under Test:** [النظام]
-- **Testing Focus:** [محور الاختبار]
-- **Tools:** [الأدوات المستخدمة]
+* **Problem:** Lesson reports were written by hand each time from a fixed template, which is repetitive and easy to get wrong.
+* **Solution:** A web app with a dashboard of lesson report cards that I can create, edit, copy and delete. It lets me reschedule a lesson by editing its report, and it blocks two reports at the same day and time.
+* **Tools:** Lovable, Supabase, GitHub
 
-[Explore the Project](./independent-project/)
+[Explore the Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project)
 
 ---
 
 ## 🔍 Engineering Focus
 
-1. ما السلوك الذي يجب أن يحققه النظام؟
-2. كيف يمكنني التحقق من هذا السلوك؟
-3. ما الحالات التي قد يفشل فيها الحل؟
-4. هل النتيجة الفعلية مطابقة للنتيجة المتوقعة؟
-5. ما سبب الفشل الذي اكتشفته؟
-6. هل أدى التعديل إلى تحسين يمكن إثباته؟
+In this unit, I focused on these questions:
+
+1. Is the data really stored, or only shown on the screen?
+2. Who can sign in, and what can each user access?
+3. Which positive, negative and edge cases should I test?
+4. When something fails, which layer is the cause?
+5. What evidence shows the result?
 
 ---
 
 ## 📌 Key Takeaway
 
-**A working demonstration is useful. Repeatable tests and documented evidence provide stronger confidence.**
-
-عرض ناجح واحد لا يكفي دائمًا؛ الاختبارات الموثقة والأدلة تساعد على تقييم النظام بصورة أفضل.
+> **A working screen is not proof that the system works.**
 
 ---
 
 ## 📈 Capability Progress
 
-- [ ] تحديد نطاق الاختبار.
-- [ ] إعداد Test Cases.
-- [ ] تحديد Expected Results.
-- [ ] توثيق Actual Results.
-- [ ] اختبار الحالات غير المعتادة.
-- [ ] تحليل الأخطاء.
-- [ ] توثيق التحسينات ونتائج إعادة الاختبار.
+* Checking data storage and retrieval.
+* Testing sign-up and access.
+* Writing tests with expected and actual results.
+* Reading errors and finding their cause.
+* Documenting results with screenshots.
 
 ---
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project/)
-- [Independent Project](./independent-project/)
+* [Guided Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project)
+* [Independent Project](https://github.com/danaabuhassira/Portfolio_Template/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project)
 
----
-
-**Next:** U4 — GROUND ITS KNOWLEDGE
+**Next: U4 — GROUND ITS KNOWLEDGE**
